@@ -31,7 +31,7 @@ export default function FinalPage({reward}) {
                         <span style={{fontSize:'42px',color:'#ffff',fontWeight:'bold'}}></span>
                       </div>
                       <div onClick={()=>{navigator.clipboard.writeText(`${randomValue}`)}} style={{cursor:'pointer',padding:'10px',borderBottomRightRadius:'10px',borderTopRightRadius:'10px',backgroundColor:'#146531',display:'flex',justifyContent:'center',alignItems:'center'}}>
-                        <span style={{fontSize:'32px',color:'#ffff',fontWeight:'bold'}} title='Copy' onClick={ toast("Copied!!")}>Copy</span>
+                        <span style={{fontSize:'32px',color:'#ffff',fontWeight:'bold'}} title='Copy'>Copy</span>
                       </div>
                   </div>
                   <div style={{display:'flex',justifyContent:'center'}}>

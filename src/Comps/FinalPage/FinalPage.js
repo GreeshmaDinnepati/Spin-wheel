@@ -3,7 +3,8 @@ import '../HomePage/HomePage.css';
 import ReactAudioPlayer from 'react-audio-player';
 import wheelerImg  from '../../assets/images/Picsart_22-11-24_12-14-54-912-removebg-preview.png';
 import congratulations from '../../assets/Music/Congratulations.mp3';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function FinalPage({reward}) {
   const [randomValue,setRandomValue] = useState(`AXE2FD1${Math.round(Math.random()*100)}`);
   // const [playBgm, setPlayBgm] = useState(false);
@@ -37,9 +38,10 @@ export default function FinalPage({reward}) {
                     <button
                     title='Copy'
                      onClick={()=>{
-                      navigator.clipboard.writeText(`${randomValue}`);
-                      window.open('', '_self', ''); window.close();
+                      navigator.clipboard.writeText(`${randomValue}`,
+                      toast("Copied!!"));
                       }} style={{cursor:'pointer',width:'310px',height:'60px',display:'flex',alignItems:'center',justifyContent:'center', borderRadius:'50px',backgroundColor:'#146531',color:'#ffff',fontWeight:'bold',fontSize:'20px'}}>Close Panel & Copy</button>
+                      <ToastContainer />
                   </div>
                   <div style={{display:'flex',justifyContent:'center'}}><i style={{fontSize:'10px',color:'#146531'}}>*You can claim your coupon for 10 minutes only!</i></div>
             </div>          
